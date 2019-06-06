@@ -34,7 +34,7 @@ class SearchKanji extends Component {
     const postItems = this.props.results.map(res => (
       <div className="cardStyle row" key={res.slug}>
         <div className="wrapper" key={res.slug}>
-          <div className="box header">
+          <div className="box header ">
             <span className="reading">{res.japanese[0].reading}</span>
             <p className="labelStyle">
               {res.japanese[0].word
@@ -45,14 +45,24 @@ class SearchKanji extends Component {
 
           <div className="sidebar">
             {" "}
-            <p>
-              <h4>Jlpt Level: </h4>
-              <div>{res.jlpt}</div>
-            </p>
+            {res.is_common ? <span className="common">common</span> : null}
+            <br />
+            <br />
+            {res.jlpt[res.jlpt.length - 1] ? (
+              <span className="jlpt">{res.jlpt[res.jlpt.length - 1]}</span>
+            ) : null}
+            <br />
+            <br />
+            {res.tags[0] ? <span className="tags">{res.tags[0]}</span> : null}
           </div>
           <div className="box content">
             {" "}
-            <h4>English Definition: </h4>
+            <h5>
+              {" "}
+              {res.senses[0].parts_of_speech.map(typ => (
+                <span key={typ}>{typ} </span>
+              ))}
+            </h5>
             <ul>
               {res.senses[0].english_definitions.map(def => (
                 <li key={def}>{def}</li>

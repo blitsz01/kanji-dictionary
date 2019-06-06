@@ -3,7 +3,7 @@ import { FETCH_RESULTS } from "./types";
 export const fetchResults = keyword => dispatch => {
   fetch(
     "https://cors-anywhere.herokuapp.com/https://jisho.org/api/v1/search/words?keyword=" +
-      keyword
+      keyword.toLowerCase()
   )
     .then(res => res.json())
     .then(posts =>

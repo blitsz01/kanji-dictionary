@@ -110,3 +110,27 @@
   grid-column: content-start;
   grid-row: header-start / content-end;
 }
+
+#outer .sidebar .jlpt {
+  background-color: #0d3ab4b0;
+  border-radius: 7px;
+  padding: 5px;
+  color: aliceblue;
+  margin-left: 5px;
+}
+
+#outer .sidebar .common {
+  background-color: #0db437;
+  border-radius: 7px;
+  padding: 5px;
+  color: aliceblue;
+  margin-left: 5px;
+}
+
+#outer .sidebar .tags {
+  background-color: #b40d4da1;
+  border-radius: 7px;
+  padding: 5px;
+  color: aliceblue;
+  margin-left: 5px;
+}
