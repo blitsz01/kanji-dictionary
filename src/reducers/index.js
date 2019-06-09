@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
-import postReducer from './postReducer';
+import { combineReducers } from "redux";
+import dictionaryReducer from "./dictionaryReducer";
 
 export default combineReducers({
-  posts: postReducer
+  wordsResults: dictionaryReducer
 });

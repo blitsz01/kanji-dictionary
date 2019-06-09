@@ -1,0 +1,14 @@
+#outerKanji {
+  width: 95%;
+  background-color: #5fc7ea;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 0px #2b3033;
+}
+h1 {
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+}

@@ -1,0 +1,73 @@
+#kMain {
+  padding-top: 20px;
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+}
+.item1 {
+  grid-area: kanji;
+}
+.item2 {
+  grid-area: english;
+}
+.item3 {
+  grid-area: onyomi;
+}
+.item4 {
+  grid-area: kunyomi;
+}
+.item5 {
+  grid-area: imageSvn;
+}
+.item6 {
+  grid-area: rightInfo;
+}
+.imageContainer {
+  width: 100%;
+  text-align: center;
+}
+.imageSvg {
+  display: inline-block;
+  border-style: solid;
+  margin: 5px;
+  border-width: thin;
+}
+.itemRead {
+  width: 50%;
+  display: inline-block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "kanji english english english english rightInfo"
+    "kanji onyomi onyomi kunyomi kunyomi kunyomi"
+    "kanji imageSvn imageSvn imageSvn imageSvn imageSvn";
+  grid-gap: 5px;
+  padding: 5px;
+  background-color: #0065a6;
+  margin-bottom: 2px;
+}
+@media screen and (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "kanji rightInfo"
+      "english english"
+      "onyomi onyomi"
+      "kunyomi kunyomi"
+      "imageSvn imageSvn";
+    grid-gap: 5px;
+    padding: 5px;
+    background-color: #0065a6;
+  }
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px;
+}
+
+#strokeLabel {
+  display: inline-block;
+}

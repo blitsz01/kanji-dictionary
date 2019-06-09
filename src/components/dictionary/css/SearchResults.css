@@ -1,22 +1,15 @@
-#outer {
-  width: 95%;
-  background-color: #5fc7ea;
-  margin: auto;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 5px 5px 5px 0px #2b3033;
-}
 #outer .cardStyle {
-  width: 100%;
+  width: 99.8%;
   background-color: #fff;
   display: table;
-  margin-bottom: 2.5px;
+  margin-bottom: 3px;
   border-radius: 5px;
   padding-left: 5px;
+  margin-right: 5px;
 }
 #outer .labelStyle {
   color: #2b3033;
-  font-size: calc(4vw + 4vh + 2vmin);
+  font-size: calc(2vw + 2vh + 1vmin);
   margin-left: 1px;
 }
 @media screen and (min-width: 1200px) {
@@ -38,39 +31,6 @@
     font-size: 15px;
   }
 }
-#outer #buttonSearch {
-  background-color: #0065a6;
-  color: aliceblue;
-  margin: 0;
-  width: 45px;
-  height: 44px;
-  border-radius: 10px 10px 10px 10px;
-  margin-left: -40px;
-}
-#outer #buttonSearch #search {
-  width: 15px;
-  height: 15px;
-}
-#outer input[type="text"] {
-  width: 50vw;
-  padding: 11px;
-  outline: none;
-  border: 2px solid #999999;
-  border-radius: 10px 10px 10px 10px;
-  font-family: Cambria, Cochin, Georgia, serif;
-  font-size: 16px;
-  margin: 0 auto;
-}
-#searchForm {
-  width: 90%;
-  text-align: center;
-  border-radius: 10px;
-  padding: 5px;
-  margin: auto;
-}
-#outer .sidebar {
-  grid-area: sidebar;
-}
 
 #outer .content {
   grid-area: content;
@@ -80,12 +40,19 @@
   grid-area: header;
 }
 
+#outer .sidebar {
+  grid-area: sidebar;
+}
+#outer .reading {
+  grid-area: reading;
+}
+
 #outer .wrapper {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 40% 60%;
+  padding: 5px;
   grid-template-areas:
+    "reading  reading  "
     "header  header  "
     "sidebar content ";
   color: #444;
@@ -95,20 +62,6 @@
   background-color: #444;
   color: #fff;
   border-radius: 5px;
-}
-
-#outer h1 {
-  color: #fff;
-}
-
-#outer .header {
-  border-width: thin;
-  padding-left: 10px;
-}
-
-#outer .overlay {
-  grid-column: content-start;
-  grid-row: header-start / content-end;
 }
 
 #outer .sidebar .jlpt {
@@ -133,4 +86,10 @@
   padding: 5px;
   color: aliceblue;
   margin-left: 5px;
+}
+
+#outer .wrapper ul {
+  display: block;
+  list-style-type: square;
+  padding-inline-start: 20px;
 }

@@ -1,15 +1,15 @@
-import { FETCH_RESULTS } from "./types";
+import { FETCH_KANJI_RESULTS } from "./types";
 
-export const fetchResults = keyword => dispatch => {
+export const fetchKanjiResults = (value, index, array) => dispatch => {
   fetch(
-    "https://cors-anywhere.herokuapp.com/https://jisho.org/api/v1/search/words?keyword=" +
-      keyword.toLowerCase()
+    "https://cors-anywhere.herokuapp.com/https://tangorin.com/api/dict/search?dict=kanji&query=" +
+      value
   )
     .then(res => res.json())
     .then(posts =>
       dispatch({
-        type: FETCH_RESULTS,
-        payload: posts.data
+        type: FETCH_KANJI_RESULTS,
+        payload: posts[0].rows
       })
     );
 };

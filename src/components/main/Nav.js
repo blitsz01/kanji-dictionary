@@ -14,7 +14,7 @@ import jigsaw from "./image/jigsaw-dark.svg";
 import aboutDark from "./image/about.svg";
 import about from "./image/about-dark.svg";
 
-import "./Nav.css";
+import "./css/Nav.css";
 class Nav extends Component {
   render() {
     var visibility = "hide";
@@ -55,25 +55,41 @@ class Nav extends Component {
           <ul>
             <li>
               <Link className="nav-link" to="/">
-                <div style={pictureTranslate} className="pictureContainer" />
+                <div
+                  style={pictureTranslate}
+                  className="pictureContainer"
+                  onClick={this.props.handleMouseDown}
+                />
                 <h4>Dictionary</h4>
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/kanji">
-                <div style={pictureCalligraphy} className="pictureContainer" />
+                <div
+                  style={pictureCalligraphy}
+                  className="pictureContainer"
+                  onClick={this.props.handleMouseDown}
+                />
                 <h4>Search Kanji</h4>
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/games">
-                <div style={pictureJigsaw} className="pictureContainer" />
+                <div
+                  style={pictureJigsaw}
+                  className="pictureContainer"
+                  onClick={this.props.handleMouseDown}
+                />
                 <h4>Games</h4>
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/about">
-                <div style={pictureAbout} className="pictureContainer" />
+                <div
+                  style={pictureAbout}
+                  className="pictureContainer"
+                  onClick={this.props.handleMouseDown}
+                />
                 <h4>About</h4>
               </Link>
             </li>

@@ -1,0 +1,42 @@
+#outerKanji #buttonSearch {
+  margin: 0;
+  width: 50px;
+  height: 42px;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: -50px;
+
+  border: 0;
+  background: 0;
+  padding: 0.5em;
+  color: #171717;
+}
+#outerKanji #buttonSearch #search {
+  width: 15px;
+  height: 15px;
+}
+#outerKanji input[type="text"] {
+  width: 65vw;
+  padding: 11px;
+  outline: none;
+  border: 2px solid #999999;
+  border-radius: 10px 10px 10px 10px;
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+#searchForm {
+  width: 90%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: auto;
+}
+
+#outerKanji h1 {
+  color: #fff;
+}
+
+#outerKanji .header {
+  border-width: thin;
+  padding-left: 10px;
+}

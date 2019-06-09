@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import "./DictionaryPage.css";
-import SearchKanji from "./SearchKanji";
+import "./css/DictionaryPage.css";
+import SearchWords from "./SearchWords";
+import SearchResults from "./SearchResults";
 
 class DictionaryPage extends Component {
   render() {
     return (
-      <div>
-        <SearchKanji />
+      <div id="outer">
+        <SearchWords />
+        <SearchResults />
       </div>
     );
   }
