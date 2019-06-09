@@ -42,7 +42,7 @@ class SearchResults extends Component {
         </div>
       ))
     ) : (
-      <h3>No results!</h3>
+      <div />
     );
     return <div>{wordsList}</div>;
   }

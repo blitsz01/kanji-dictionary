@@ -40,7 +40,7 @@ class MainPage extends Component {
         <div className="header">
           <a href="/" className="logo">
             <img className="logoImage" src={logo} />
-            React Japanese Dictionary
+            React/Redux Japanese App
           </a>
         </div>
         <hr />

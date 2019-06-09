@@ -1,7 +1,7 @@
 #kMain {
   padding-top: 20px;
   width: 100%;
-  font-size: 50px;
+  font-size: 85px;
   text-align: center;
 }
 .item1 {
@@ -40,13 +40,13 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    "kanji english english english english rightInfo"
-    "kanji onyomi onyomi kunyomi kunyomi kunyomi"
-    "kanji imageSvn imageSvn imageSvn imageSvn imageSvn";
+    "kanji kanji english english english rightInfo"
+    "onyomi onyomi onyomi kunyomi kunyomi kunyomi"
+    "imageSvn imageSvn imageSvn imageSvn imageSvn imageSvn";
   grid-gap: 5px;
   padding: 5px;
-  background-color: #0065a6;
-  margin-bottom: 2px;
+  background-color: #5fc7ea;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 600px) {
   .grid-container {
@@ -57,13 +57,14 @@
       "onyomi onyomi"
       "kunyomi kunyomi"
       "imageSvn imageSvn";
-    grid-gap: 5px;
+    grid-gap: 2px;
     padding: 5px;
-    background-color: #0065a6;
+    background-color: #5fc7ea;
+    border-radius: 7px;
   }
 }
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
   text-align: left;
   padding: 20px;
 }

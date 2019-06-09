@@ -33,7 +33,7 @@ class SearchWords extends Component {
       <div>
         <form onSubmit={this.onSubmit}>
           <div>
-            <h1>Search here</h1>
+            <h1>Search Word</h1>
             <div id="searchForm">
               <input
                 placeholder="Search..English, Japanese"
