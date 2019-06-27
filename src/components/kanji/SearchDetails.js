@@ -21,41 +21,45 @@ class SearchDetails extends Component {
   render() {
     const kanjiInfo = this.props.results ? (
       this.props.results.map(res => (
-        <div className="grid-container" key={res.k}>
-          <div className="item1">
+        <div className="row" key={res.k}>
+          <div className="col-1">
             {" "}
             <div id="kMain">{res.k}</div>
           </div>
-          <div className="item2">
+          <div className="col-2">
             {" "}
             <h4>English :</h4>
             <ul>
               {res.eng ? res.eng.map(eng => <li key={eng}>{eng}</li>) : null}
             </ul>
           </div>
-          <div className="item3">
-            {" "}
-            <h4>Onyomi : </h4>
-            <div className="itemRead">
+          <div className="col-2">
+            <h4>Kanji Rank : </h4>
+            <p>Jlpt {res.jlpt}</p>
+            <p>Grade {res.gr}</p>
+          </div>
+          <div className="row col-3">
+            <h4>Onyomi :</h4>
+            <div className="col-4">
               <ul>
                 {res.on ? res.on.map(on => <li key={on}>{on}</li>) : null}
               </ul>
             </div>
-            <div className="itemRead">
+            <div className="col-4">
               <ul>
                 {res.onr ? res.onr.map(onr => <li key={onr}>{onr}</li>) : null}
               </ul>
             </div>
           </div>
-          <div className="item4">
+          <div className="row col-3">
             {" "}
             <h4>Kunyomi : </h4>
-            <div className="itemRead">
+            <div className="col-4">
               <ul>
                 {res.kun ? res.kun.map(kun => <li key={kun}>{kun}</li>) : null}
               </ul>
             </div>
-            <div className="itemRead">
+            <div className="col-4">
               <ul>
                 {res.kunr
                   ? res.kunr.map(kunr => <li key={kunr}>{kunr}</li>)
@@ -63,7 +67,7 @@ class SearchDetails extends Component {
               </ul>
             </div>
           </div>
-          <div className="item5">
+          <div className="col-5">
             <h4 id="strokeLabel">Stroke Count :</h4>
             <span>{res.jk}</span>
             <div className="imageContainer">
@@ -75,11 +79,6 @@ class SearchDetails extends Component {
                   : null}
               </p>
             </div>
-          </div>
-          <div className="item6">
-            <h4>Kanji Rank : </h4>
-            <p>Jlpt {res.jlpt}</p>
-            <p>Grade {res.gr}</p>
           </div>
         </div>
       ))

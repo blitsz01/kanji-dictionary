@@ -1,95 +1,77 @@
-#outer .cardStyle {
-  width: 99.8%;
+#outer .row {
   background-color: #fff;
-  display: table;
   margin-bottom: 3px;
   border-radius: 5px;
-  padding-left: 5px;
-  margin-right: 5px;
 }
 #outer .labelStyle {
   color: #2b3033;
   font-size: calc(2vw + 2vh + 1vmin);
   margin-left: 1px;
 }
-@media screen and (min-width: 1200px) {
-  #outer .labelStyle {
-    font-size: 40px;
-  }
-}
 
 #outer .reading {
-  margin-top: 10px;
   position: absolute;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-top: 10px;
   font-size: calc(7px + 0.9vw);
 }
 
-@media screen and (min-width: 1200px) {
-  #outer .reading {
-    font-size: 15px;
-  }
-}
-
-#outer .content {
-  grid-area: content;
-}
-
-#outer .header {
-  grid-area: header;
-}
-
-#outer .sidebar {
-  grid-area: sidebar;
-}
-#outer .reading {
-  grid-area: reading;
-}
-
-#outer .wrapper {
-  display: grid;
-  grid-gap: 10px;
-  padding: 5px;
-  grid-template-areas:
-    "reading  reading  "
-    "header  header  "
-    "sidebar content ";
-  color: #444;
-}
-
-#outer.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-}
-
-#outer .sidebar .jlpt {
+#outer .jlpt {
   background-color: #0d3ab4b0;
   border-radius: 7px;
   padding: 5px;
   color: aliceblue;
-  margin-left: 5px;
 }
 
-#outer .sidebar .common {
+#outer .common {
   background-color: #0db437;
   border-radius: 7px;
   padding: 5px;
   color: aliceblue;
-  margin-left: 5px;
 }
 
-#outer .sidebar .tags {
+#outer .tags {
   background-color: #b40d4da1;
   border-radius: 7px;
   padding: 5px;
   color: aliceblue;
-  margin-left: 5px;
 }
 
-#outer .wrapper ul {
+#outer ul {
   display: block;
   list-style-type: square;
   padding-inline-start: 20px;
+}
+
+#outer .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-1 {
+  width: 33.33%;
+}
+
+.col-2 {
+  width: 40.33%;
+}
+
+.col-3 {
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  #outer .labelStyle {
+    font-size: 40px;
+  }
+  .col-2 {
+    width: 58.33%;
+  }
 }

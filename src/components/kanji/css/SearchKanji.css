@@ -16,12 +16,11 @@
 }
 #outerKanji input[type="text"] {
   width: 65vw;
-  padding: 11px;
+  padding: 15px 15px 15px 15px;
   outline: none;
-  border: 2px solid #999999;
-  border-radius: 10px 10px 10px 10px;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
   font-family: Cambria, Cochin, Georgia, serif;
-  font-size: 16px;
   margin: 0 auto;
 }
 #searchForm {

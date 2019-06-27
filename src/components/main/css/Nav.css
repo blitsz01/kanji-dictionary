@@ -29,6 +29,7 @@
   width: 100%;
   height: 40px;
   border-radius: 15px 15px 15px 15px;
+  -webkit-box-shadow: 5px 5px 25px -2px #2b3033;
   box-shadow: 5px 5px 25px -2px #2b3033;
 }
 
@@ -63,14 +64,15 @@
 }
 
 .pictureContainer {
-  height: 118px;
-  width: 125px;
+  height: 140px;
+  width: 100%;
   overflow: hidden;
   border-radius: 30px;
   float: left;
   padding: -10px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: ccontain, coverover;
 }
 .pictureContainer:hover {
   background-color: #c1d6e2;

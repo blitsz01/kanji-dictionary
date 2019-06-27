@@ -35,16 +35,18 @@ class SearchWords extends Component {
           <div>
             <h1>Search Word</h1>
             <div id="searchForm">
-              <input
-                placeholder="Search..English, Japanese"
-                type="text"
-                name="keyWord"
-                onChange={this.onChange}
-                value={this.state.keyWord}
-              />
-              <button id="buttonSearch" type="submit">
-                <FaSearch id="search" />
-              </button>
+              <div className="inputContainer">
+                <input
+                  placeholder="Search..English, Japanese"
+                  type="text"
+                  name="keyWord"
+                  onChange={this.onChange}
+                  value={this.state.keyWord}
+                />
+                <button id="buttonSearch" type="submit">
+                  <FaSearch id="search" />
+                </button>
+              </div>
             </div>
             <hr />
           </div>
